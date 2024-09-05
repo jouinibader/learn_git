@@ -1,0 +1,104 @@
+PS C:\Users\bader\Desktop\git_test> mkdir leran_git
+
+
+    Répertoire : C:\Users\bader\Desktop\git_test
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        05/09/2024     18:50                leran_git
+
+
+PS C:\Users\bader\Desktop\git_test> cd..
+PS C:\Users\bader\Desktop> cd learn_git
+PS C:\Users\bader\Desktop\learn_git> ni "third.txt"
+
+
+    Répertoire : C:\Users\bader\Desktop\learn_git
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----        05/09/2024     18:52              0 third.txt
+
+
+PS C:\Users\bader\Desktop\learn_git> git init
+Reinitialized existing Git repository in C:/Users/bader/Desktop/learn_git/.git/
+PS C:\Users\bader\Desktop\learn_git> git add .
+PS C:\Users\bader\Desktop\learn_git> git commit -m  "adding third.txt"
+[master e8d2f29] adding third.txt
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 third.txt
+PS C:\Users\bader\Desktop\learn_git> git log
+commit e8d2f29fae55329b4b254fe45fe45d89f66a8fb9 (HEAD -> master)
+Author: bader jouini <jouinbader.jb@gmail.com>
+Date:   Thu Sep 5 18:53:57 2024 +0100
+
+    adding third.txt
+
+commit 360cfe4f60cc478bb74de652efa7dcb7b47a1c1c (origin/master)
+Author: jouinibader <jouinibader.jb@gmail.com>
+Date:   Thu Sep 5 10:58:30 2024 +0100
+
+    Update bader.txt
+
+commit 16c6cb063d3faf902ccef251c49d046f68fe0e33
+Author: bader jouini <jouinbader.jb@gmail.com>
+Date:   Thu Sep 5 10:33:13 2024 +0100
+
+    first_comit
+PS C:\Users\bader\Desktop\learn_git> ni "fourth.txt" 
+
+
+    Répertoire : C:\Users\bader\Desktop\learn_git
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----        05/09/2024     18:55              0 fourth.txt
+
+
+PS C:\Users\bader\Desktop\learn_git> git add .
+PS C:\Users\bader\Desktop\learn_git> git commit -m "adding fourth.txt"
+[master ac24ee5] adding fourth.txt
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 fourth.txt
+PS C:\Users\bader\Desktop\learn_git> git rm --cached "third.txt"
+rm 'third.txt'
+PS C:\Users\bader\Desktop\learn_git> git add .
+PS C:\Users\bader\Desktop\learn_git> git status 
+On branch master
+nothing to commit, working tree clean
+PS C:\Users\bader\Desktop\learn_git> git commit -m "removing third.txt"
+On branch master
+nothing to commit, working tree clean
+PS C:\Users\bader\Desktop\learn_git> git log
+commit ac24ee5d1837f17881a05439f90a5fd50c55d05d (HEAD -> master)
+Author: bader jouini <jouinbader.jb@gmail.com>
+Date:   Thu Sep 5 18:56:57 2024 +0100
+
+    adding fourth.txt
+
+commit e8d2f29fae55329b4b254fe45fe45d89f66a8fb9
+Author: bader jouini <jouinbader.jb@gmail.com>
+Date:   Thu Sep 5 18:53:57 2024 +0100
+
+    adding third.txt
+
+commit 360cfe4f60cc478bb74de652efa7dcb7b47a1c1c (origin/master)
+Author: jouinibader <jouinibader.jb@gmail.com>
+Date:   Thu Sep 5 10:58:30 2024 +0100
+
+    Update bader.txt
+
+commit 16c6cb063d3faf902ccef251c49d046f68fe0e33
+Author: bader jouini <jouinbader.jb@gmail.com>
+Date:   Thu Sep 5 10:33:13 2024 +0100
+
+    first_comit
+PS C:\Users\bader\Desktop\learn_git> git config --global user.name "bader jouini"
+PS C:\Users\bader\Desktop\learn_git> git config –list –show-origin  
+error: key does not contain a section: –list
+PS C:\Users\bader\Desktop\learn_git> git config --global
+error: no action specified
+PS C:\Users\bader\Desktop\learn_git> 
